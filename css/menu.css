@@ -1,0 +1,339 @@
+nav {
+    font-size:22px;
+    line-height: 32px;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    word-wrap:break-word !important;
+    font-family: 'Open Sans', sans-serif;
+    }
+
+nav h1 {
+    font-size: 60px;
+    text-align: center;
+    color: #FFF;
+}   
+
+nav h3 {
+    font-size: 30px;
+    line-height: 34px;
+    text-align: center;
+    color: #FFF;
+}
+
+nav h3 a {
+    color: #FFF;
+}
+
+nav a {
+    color: #FFF;
+}
+
+nav h1 {
+    margin-top: 100px;
+    text-align:center;
+    font-size:60px;
+    line-height: 70px;
+    font-family: 'Bree Serif', 'serif';
+    }
+
+
+#container {
+    margin: 0 auto;
+    max-width: 890px;
+}
+
+nav p {
+    text-align: center;
+}
+
+.toggle,
+[id^=drop] {
+    display: none;
+}
+
+/* Dar un color de fondo al contenedor de navegación. */
+nav { 
+    margin:0;
+    padding: 0;
+    background-color: #202020;
+    width:100%;
+     max-width: 1200px;
+
+}
+
+#logo {
+    margin: 12px 30px 0 30px;
+    display: block;
+    float: left;
+   
+}
+
+#logo{
+    font: 90%/180% Arial, Helvetica, sans-serif;
+}
+
+#logo a {
+    color: #69C;
+    text-decoration: none;
+}
+
+
+
+#logo input {
+    outline: none;
+}
+
+input[type=search] {
+    -webkit-appearance: textfield;
+    -webkit-box-sizing: content-box;
+    font-family: inherit;
+    font-size: 75%;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+    display: none; 
+}
+
+
+input[type=search] {
+    background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+    border: solid 1px #ccc;
+    padding: 4px 10px 4px 32px;
+    width: 60px;
+    
+    -webkit-border-radius: 10em;
+    -moz-border-radius: 10em;
+    border-radius: 10em;
+    
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
+}
+input[type=search]:focus {
+    width: 130px;
+    background-color: #fff;
+    border-color: #66CC75;
+    
+    -webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+    -moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+    box-shadow: 0 0 5px rgba(109,207,246,.5);
+}
+
+
+input:-moz-placeholder {
+    color: #999;
+}
+input::-webkit-input-placeholder {
+    color: #999;
+}
+
+
+/* Como tendremos el flotador "ul li": izquierda"
+ * Necesitamos agregar después del contenedor */
+
+nav:after {
+    content:"";
+    display:table;
+    clear:both;
+}
+
+/* Eliminar el relleno, el margen y el "estilo de lista" del "ul",
+ * y agregando "position: relative" */
+nav ul {
+    float: right;
+    padding:0;
+    margin:0;
+    list-style: none;
+    position: relative;
+    }
+    
+/* Posicionar los elementos de navegación en línea */
+nav ul li {
+    margin: 0px;
+    display:inline-block;
+    float: left;
+    background-color: #202020 ;
+    }
+
+/* Estilizando los enlaces
+ */
+nav a {
+    display:block;
+    padding:14px 20px;  
+    color:#FFF;
+    font-size:17px;
+    text-decoration:none;
+}
+
+
+nav ul li ul li:hover { background: #000000; }
+
+/* Cambio de color de fondo al pasar el mouse */
+nav a:hover { 
+    background-color: #000000; 
+}
+
+/* Ocultar menús desplegables por defecto
+ * y dándole una posición de absoluta */
+nav ul ul {
+    display: none;
+    position: absolute; 
+    /* tiene que ser el mismo número que el "line-height" de "nav a" */
+    top: 60px; 
+}
+    
+/* Mostrar menús desplegables al pasar el mouse por encima */
+nav ul li:hover > ul {
+    display:inherit;
+}
+    
+/* Primer nivel desplegable*/
+nav ul ul li {
+    width:170px;
+    float:none;
+    display:list-item;
+    position: relative;
+}
+
+/* Segundo, tercero y más niveles
+ * Movimos los menús desplegables de segundo y tercer nivel a la izquierda
+ * Por la cantidad del ancho del primer nivel
+*/
+nav ul ul ul li {
+    position: relative;
+    top:-60px;
+    /* tiene que ser el mismo número que el "width" de "nav ul ul li" */ 
+    left:170px; 
+}
+
+    
+/* Cambie el '+' para cambiar el símbolo desplegable
+ */
+li > a:after { content:  ''; }
+li > a:only-child:after { content: ''; }
+
+
+/* Media Queries
+--------------------------------------------- */
+
+@media all and (max-width : 700px) {
+
+    #logo {
+        display: block;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        float: none;
+  margin: 12px 0;
+   
+
+    }
+
+    input[type=search] {
+        width: 100px;
+    }
+
+    nav {
+        margin: 0;
+    }
+
+    /* Ocultar el menú de navegación por defecto */
+    /* También esconde el */
+    .toggle + a,
+    .menu {
+        display: none;
+    }
+    .toggle img{
+        width:14px;
+    }
+    /* Aplicar estilo a la etiqueta de alternar */
+    .toggle {
+        display: block;
+        background-color: #202020;
+        padding:14px 20px;  
+        color:#FFF;
+        font-size:17px;
+        text-decoration:none;
+        border:none;
+    }
+
+    .toggle:hover {
+        background-color: #101010;
+    }
+
+    /* Mostrar menú desplegable cuando se hace clic en la etiqueta principal */
+    [id^=drop]:checked + ul {
+        display: block;
+    }
+
+    /* Cambiar el width del elemento del menú al 100% */
+    nav ul li {
+        display: block;
+        width: 100%;
+        }
+
+    nav ul ul .toggle,
+    nav ul ul a {
+        padding: 0 40px;
+    }
+
+    nav ul ul ul a {
+        padding: 0 80px;
+    }
+
+    nav a:hover,
+    nav ul ul ul a {
+        background-color: #000000;
+    }
+  
+    nav ul li ul li .toggle,
+    nav ul ul a,
+  nav ul ul ul a{
+        padding:14px 20px;  
+        color:#FFF;
+        font-size:17px; 
+    }
+  
+  
+    nav ul li ul li .toggle,
+    nav ul ul a {
+        background-color: #202020; 
+    }
+
+    /* Ocultar menús desplegables por defecto */
+    nav ul ul {
+        float: none;
+        position:static;
+        color: #ffffff;
+        /* Tiene que ser el mismo número que el "line-height" de "nav a" */
+    }
+        
+    /* Ocultar menús al pasar el mouse */
+    nav ul ul li:hover > ul,
+    nav ul li:hover > ul {
+        display: none;
+    }
+        
+    /* Primer nivel desplegable*/
+    nav ul ul li {
+        display: block;
+        width: 100%;
+    }
+
+    nav ul ul ul li {
+        position: static;
+        /* Tiene que ser el mismo número que el "width" del "nav ul ul li" */ 
+
+    }
+
+}
+
+@media all and (max-width : 330px) {
+
+    nav ul li {
+        display:block;
+        width: 94%;
+    }
+
+}

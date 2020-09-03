@@ -1,0 +1,16 @@
+header {
+	background:#202020;
+	width:100%;
+ 
+	/* Flexbox */
+	display: flex;
+	justify-content:space-around;
+	align-items:center;
+ 
+	flex-direction:column;
+	
+}
+
+header .logo{
+	padding: 5px 0;
+}
